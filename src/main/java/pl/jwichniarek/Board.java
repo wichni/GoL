@@ -23,7 +23,7 @@ public class Board {
     public void print() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.print((grid[i][j] ? (Colors.ANSI_RED+'x'+Colors.ANSI_RESET) : "-") + "  ");
+                System.out.print((grid[i][j] ? (Colors.ANSI_RED + 'x' + Colors.ANSI_RESET) : "-") + "  ");
             }
             System.out.println();
 
@@ -63,16 +63,16 @@ public class Board {
         return isAnyAlive;
     }
 
-    private boolean isCellAliveInNextGen (int x, int y){
+    private boolean isCellAliveInNextGen(int x, int y) {
         int neighbours = getNeighbours(x, y);
 
-        switch (neighbours){
+        switch (neighbours) {
             case 2:
                 return grid[x][y];
             case 3:
                 return true;
-                default:
-                    return false;
+            default:
+                return false;
         }
     }
 
@@ -91,8 +91,5 @@ public class Board {
             }
         }
         return aliveNeighbours;
-    }
-
-    private class ColorsPiece {
     }
 }

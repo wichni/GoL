@@ -1,11 +1,9 @@
 package pl.jwichniarek;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println(" Game of life ");
-        System.out.println();
+        System.out.println(Colors.ANSI_BLUE + " Game of life " + Colors.ANSI_RESET);
+        System.out.println(Colors.ANSI_RED + " Enter size: " + Colors.ANSI_RESET);
         Game game = new Game();
         game.startGame();
 
